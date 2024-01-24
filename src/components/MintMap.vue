@@ -1,6 +1,6 @@
 <template>
     <div class="pepe-bg flex flex-wrap gap-0 aspect-square relative">
-        <div v-for="(visible, i) in tiles" :key="i" class="tile h-[6.25%] w-[6.25%] text-xs bg-black bg-opacity-50 border border-slate-600 rounded-sm flex justify-center items-center"
+        <div v-for="(visible, i) in tiles" :key="i" class="tile h-[6.25%] w-[6.25%] text-xs bg-black bg-opacity-95 border border-slate-600 rounded-sm flex justify-center items-center"
                 :class="{'off': !visible}" :style="`animation-delay: ${i * 7}ms;`">
                 <span v-if="visible" class="id transition-all">{{ i + 1 }}</span>
         </div>

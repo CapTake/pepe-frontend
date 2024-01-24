@@ -1,3 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    font-family: pixel, Arial, Helvetica, sans-serif;
+    background-color:rgb(4, 97, 254);
+    cursor: url('cursor1_m.png'),auto;
+    cursor: -webkit-image-set(url('cursor1_m.png') 1x,url('cursor1.png') 2.5x),auto;
+}
+
+.bg-primary{
+  background-color:rgb(4, 97, 254);
+}
+.bg-green{
+  background-color:rgb(90, 208, 90);   
+}
+.bg-primary-90{
+  background-color:rgba(4, 97, 254, 0.75);
+}
+.text-green{
+  color:rgb(56, 180, 7); 
+}
+a, button {
+    text-decoration: none!important;
+    cursor: url('cursor2_m.png'),auto!important;
+    cursor: -webkit-image-set(url('cursor2_m.png') 1x,url('cursor2.png') 2.5x),auto!important;
+}
+
+/* Font CSS */
+@font-face {
+    font-family: daruma;
+    src: url('DarumadropOne-Regular.ttf');
+}		
+
+.font-pepe{
+font-family: daruma !important;
+}	
+
+@font-face {
+    font-family: pixel;
+    src: url('Pixel.ttf');
+}		
+
+.font-pixel{
+font-family: pixel !important;
+}	
+
+.nav-logo{
+    width:100px;
+}
+
+.top-8{
+  top: 8.22rem;
+}
+
+.btn-border{
+    font-size: 18px;
+    padding-top:5px;
+    width: 150px;
+    height: 50px;  
+    background-color: rgb(90, 208, 90);   
+    border-top: 1px rgb(90, 208, 90);
+    border-left: 1px rgb(90, 208, 90); 
+    border-color: rgb(56, 180, 7);
+    border-right: 4px solid darkgreen; 
+    border-bottom: 6px solid darkgreen; 
+    box-shadow:   -3px 0 0 0 black,
+                   3px 0 0 0 black,
+                   0 -3px 0 0 black,
+                   0 3px 0 0 black;
+  }
+
+  .btn-border:hover{
+    background-color: rgb(75, 195, 75);  
+    border-top: 1px rgb(90, 208, 90);
+    border-left: 1px rgb(90, 208, 90); 
+    border-color: rgb(56, 180, 7);
+    border-right: 6px solid darkgreen; 
+    border-bottom: 8px solid darkgreen;  
+  }
+  
+  .btn-border:active{
+    background-color: rgb(75, 195, 75);
+    transform: translateY(3px);
+    width: 148px;
+    border-right: 4px solid darkgreen; 
+    border-bottom: 5px solid darkgreen;
+  }
+
+  @media only screen and (max-width: 850px){
+    .btn-border{
+      background-color: rgb(90, 208, 90);  
+      border-top: 1px rgb(90, 208, 90);
+      border-left: 1px rgb(90, 208, 90);   
+      border-color: rgb(56, 180, 7);
+      border-right: 6px solid darkgreen; 
+      border-bottom: 8px solid darkgreen; 
+    }
+  }
+
+.btn-short{
+    width:75px;
+    padding-top:0px;
+}
+.btn-secondary{
+    background-color: rgb(166, 209, 166);   
+    border-top: 1px rgb(166, 209, 166);  
+    border-left: 1px rgb(166, 209, 166);  
+    border-color: rgb(56, 180, 7);
+    border-right: 4px solid  rgb(102, 146, 102);   
+    border-bottom: 6px solid  rgb(102, 146, 102);  
+}
+
+  

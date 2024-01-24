@@ -1,16 +1,16 @@
 <template>
-<nav class="bg-opacity-80 bg-black fixed w-full p-4 top-0 z-50">
+<nav class="bg-primary-90 fixed w-full p-4 top-0 z-50">
     <div class="flex gap-6 justify-between items-center">
-        <RouterLink to="/#top" class="text-accent">Home</RouterLink>
+        <RouterLink to="/#top" class="text-accent text-xl"><img src="../../logo.png" class="nav-logo"></RouterLink>
 
         <div class="hidden lg:flex lg:flex-grow gap-6 text-lg">
             <div class="flex-grow"></div>
-            <RouterLink to="/dashboard" class="hover:underline text-accent">Dashboard</RouterLink>
-            <RouterLink to="/arena" class="hover:underline text-accent">Arena</RouterLink>
+            <RouterLink to="/dashboard" class="hover:underline btn btn-border btn-secondary">Dashboard</RouterLink>
+            <RouterLink to="/arena" class="hover:underline btn btn-border btn-secondary">Arena</RouterLink>
         </div>
 
         <div class="hidden lg:flex gap-4">
-            <a href="https://twitter.com/Celestial_X_" target="_blank" rel="noopener nofollow" class="text-accent btn">
+            <a href="https://twitter.com/callofpepetez" target="_blank" rel="noopener nofollow" class="btn btn-border btn-secondary btn-short">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                     viewBox="0 4 50 38" class="w-7 h-7">
                     <path
@@ -18,7 +18,7 @@
                     </path>
                 </svg>
             </a>
-            <a href="https://discord.gg/2CPeSRqKvG" target="_blank" rel="noopener nofollow" class="text-accent btn">
+            <a href="https://discord.gg/2CPeSRqKvG" target="_blank" rel="noopener nofollow" class="btn btn-border btn-secondary btn-short">
                 <svg
                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 2 50 38"
                     class="w-7 h-7">
@@ -28,26 +28,27 @@
                 </svg>
             </a>
 
-                <SyncButton class="btn btn-outline btn-accent text-sm"/>
+            <SyncButton class="btn btn-border btn-accent text-sm"/>
 
             </div>
-            <label class="btn btn-circle swap swap-rotate lg:hidden text-accent">
+            <label class="btn btn-circle swap swap-rotate lg:hidden bg-green">
                 <!-- this hidden checkbox controls the state -->
                 <input type="checkbox" v-model="menu" />
                 
                 <!-- hamburger icon -->
-                <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                <svg class="swap-off fill-black" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
                 
                 <!-- close icon -->
-                <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                <svg class="swap-on fill-black" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
             </label>
     </div>
-    <div v-if="menu" @click="menu = false" class="flex flex-col gap-4 text-4xl font-semibold tracking-wide justify-around items-center right-0 left-0 bottom-0 top-20 fixed bg-opacity-90 bg-black lg:hidden">
-        <RouterLink to="/#top" class="hover:underline text-accent">Home</RouterLink>
-        <RouterLink to="/dashboard" class="hover:underline text-accent">Dashboard</RouterLink>
-        <RouterLink to="/arena" class="hover:underline text-accent">Arena</RouterLink>
+    <div v-if="menu" @click="menu = false" class="flex flex-col gap-4 text-4xl font-semibold tracking-wide justify-around items-center right-0 left-0 bottom-0 top-8 fixed bg-opacity-90 bg-primary-90 lg:hidden text-green">
+        <RouterLink to="/#top" class="hover:underline">Home</RouterLink>
+        <RouterLink to="/dashboard" class="hover:underline">Dashboard</RouterLink>
+        <RouterLink to="/arena" class="hover:underline">Arena</RouterLink>
+        <SyncButton class="btn btn-border btn-accent text-sm"/>
         <div class="pb-8 flex gap-10">
-            <a href="https://twitter.com/Celestial_X_" target="_blank" rel="noopener nofollow" class="text-accent btn">
+            <a href="https://twitter.com/callofpepetez" target="_blank" rel="noopener nofollow" class="btn btn-border btn-short btn-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                     viewBox="0 4 50 38" class="w-7 h-7">
                     <path
@@ -55,7 +56,7 @@
                     </path>
                 </svg>
             </a>
-            <a href="https://discord.gg/2CPeSRqKvG" target="_blank" rel="noopener nofollow" class="text-accent btn">
+            <a href="https://discord.gg/2CPeSRqKvG" target="_blank" rel="noopener nofollow" class=" btn btn-border btn-short btn-secondary">
                 <svg
                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 2 50 38"
                     class="w-7 h-7">

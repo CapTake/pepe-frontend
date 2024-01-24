@@ -1,13 +1,16 @@
 <template>
     <div>
-        <MintMap :items="sale.available" class="w-[500px] max-w-full mx-auto sm:rounded-md overflow-hidden" />
+        <div class="h-screen" style="background-image:url('../../public/banner1.png');background-size:cover;max-height:750px;">
+            <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
+        </div>
+
         <div v-if="ready" class="py-10">
             <div v-if="soldOut" class="text-center text-accent text-5xl">
                 Sold Out!
             </div>
             <div v-else class="flex flex-col gap-5 items-center mx-auto text-center">
-                <h1 class="text-3xl sm:text-4xl">Pepe crew onboarding</h1>
-                <div class="text-xl">
+                <h1 class="text-3xl sm:text-5xl font-pepe">Pepe crew onboarding</h1>
+                <div class="text-2xl">
                     <progress class="progress progress-secondary w-56" :value="minted" :max="SUPPLY"></progress>
                     <div class="text-center">
                         {{ minted }} / {{ SUPPLY }}
@@ -16,13 +19,13 @@
                         <button class="btn btn-wide btn-disabled">Mint is paused</button>
                     </div>
                     <div v-else class="flex justify-center gap-5 sm:gap-8 mt-5">
-                        <button @click="mint(1)" class="btn btn-secondary sm:btn-md" :class="{'btn-sm btn-disabled': minting}">
+                        <button @click="mint(1)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 1</button>
-                        <button v-if="sale.perWalletLimit >= 3" @click="mint(3)" class="btn btn-secondary sm:btn-md" :class="{'btn-sm btn-disabled': minting}">
+                        <button v-if="sale.perWalletLimit >= 3" @click="mint(3)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 3</button>
-                        <button v-if="sale.perWalletLimit >= 5" @click="mint(5)" class="btn btn-secondary sm:btn-md" :class="{'btn-sm btn-disabled': minting}">
+                        <button v-if="sale.perWalletLimit >= 5" @click="mint(5)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 5</button>
                     </div>
@@ -32,7 +35,20 @@
         <div v-else>
             Loading...
         </div>
+        <MintMap :items="sale.available" class="w-[500px] max-w-full mx-auto sm:rounded-md overflow-hidden mt-2" />
+
         <SaleAdmin v-if="isAdmin" class="max-w-sm mx-auto" />
+
+        <h3 class="text-center text-5xl mt-32 font-pepe">What is Call of Pepe?</h3>
+
+        <h1 class="text-center text-2xl mt-12 font-pepe">Call of Pepe: Modern Memefare is a Play2Earn NFT-Game on the Tezos Blockchain. 
+            <br> Mint, Upgrade & Levelup Pepe Characters. Send them to the Arena to earn XP & $PEPE.
+        </h1>
+
+
+        <div class="h-screen mt-32" style="background-image:url('../../public/banner3.png');background-size:cover;width:100%;background-position:center bottom;">
+            <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
+        </div>
     </div>
 </template>
 

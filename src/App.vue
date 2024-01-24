@@ -2,7 +2,8 @@
   <WalletProvider>
     <TZKTWs :contracts="contracts">
       <top-nav></top-nav>
-      <RouterView class="mt-24"/>
+      <RouterView class=""/>
+      <bot-nav></bot-nav>
     </TZKTWs>
   </WalletProvider>
 </template>
@@ -11,6 +12,7 @@
 import { RouterView } from 'vue-router'
 import WalletProvider from './providers/TezosWallet.vue'
 import TopNav from './components/TopNav.vue'
+import BotNav from './components/BotNav.vue'
 import TZKTWs from './providers/TZKTWs.vue'
 
 const contracts = [

@@ -6,7 +6,7 @@
         <div class="hidden lg:flex lg:flex-grow gap-6 text-lg">
             <div class="flex-grow"></div>
             <RouterLink to="/dashboard" class="hover:underline btn btn-border btn-secondary">Dashboard</RouterLink>
-            <RouterLink to="/arena" class="hover:underline btn btn-border btn-secondary">Arena</RouterLink>
+            <RouterLink to="/arena" class="hover:underline btn btn-border btn-secondary btn-disabled">Arena</RouterLink>
         </div>
 
         <div class="hidden lg:flex gap-4">
@@ -31,7 +31,7 @@
             <SyncButton class="btn btn-border btn-accent text-sm"/>
 
             </div>
-            <label class="btn btn-circle swap swap-rotate lg:hidden bg-green">
+            <label class="btn btn-circle btn-border btn-short swap swap-rotate lg:hidden bg-green ">
                 <!-- this hidden checkbox controls the state -->
                 <input type="checkbox" v-model="menu" />
                 

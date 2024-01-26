@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="h-screen" style="background-image:url('../../public/banner1.png');background-size:cover;max-height:750px;">
+        <div class="h-screen" style="background-image:url('../../banner5.png');background-size:cover;max-height:750px;">
             <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
         </div>
 
@@ -11,6 +11,7 @@
             <div v-else class="flex flex-col gap-5 items-center mx-auto text-center">
                 <h1 class="text-3xl sm:text-5xl font-pepe">Pepe crew onboarding</h1>
                 <div class="text-2xl">
+                    <h3 class="text-3xl sm:text-4xl font-pixel pt-6">{{ sale.wlPrice / 100 }} Tez</h3>
                     <progress class="progress progress-secondary w-56" :value="minted" :max="SUPPLY"></progress>
                     <div class="text-center">
                         {{ minted }} / {{ SUPPLY }}
@@ -46,7 +47,7 @@
         </h1>
 
 
-        <div class="h-screen mt-32" style="background-image:url('../../public/banner3.png');background-size:cover;width:100%;background-position:center bottom;">
+        <div class="h-screen mt-32" style="background-image:url('../../banner4.png');background-size:cover;width:100%;background-position:center top;">
             <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
         </div>
     </div>

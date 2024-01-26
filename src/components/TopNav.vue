@@ -1,7 +1,7 @@
 <template>
 <nav class="bg-primary-90 fixed w-full p-4 top-0 z-50">
     <div class="flex gap-6 justify-between items-center">
-        <RouterLink to="/#top" class="text-accent text-xl"><img src="../../logo.png" class="nav-logo"></RouterLink>
+        <RouterLink to="/#top" class="text-accent text-xl"><img src="../assets/logo.png" class="nav-logo"></RouterLink>
 
         <div class="hidden lg:flex lg:flex-grow gap-6 text-lg">
             <div class="flex-grow"></div>

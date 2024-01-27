@@ -20,13 +20,13 @@
                         <button class="btn btn-wide btn-disabled">Mint is paused</button>
                     </div>
                     <div v-else class="flex justify-center gap-5 sm:gap-8 mt-5">
-                        <button @click="mint(1)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
+                        <button @click="mint(1)" @mouseover="playClick" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 1</button>
-                        <button v-if="sale.perWalletLimit >= 3" @click="mint(3)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
+                        <button v-if="sale.perWalletLimit >= 3" @click="mint(3)" @mouseover="playClick" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 3</button>
-                        <button v-if="sale.perWalletLimit >= 5" @click="mint(5)" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
+                        <button v-if="sale.perWalletLimit >= 5" @click="mint(5)" @mouseover="playClick" class="btn sm:btn-md btn-border btn-accent" :class="{'btn-sm btn-disabled': minting}">
                             <span v-if="minting" class="loading loading-spinner loading-xs md:loading-md"></span>
                             Mint 5</button>
                     </div>
@@ -205,4 +205,11 @@ onBeforeMount(async () => {
 onBeforeUnmount(() => {
     wssunsubscribe(onTransaction)
 })
+
+const audio = new Audio('../../click.mp3');
+
+function playClick() {
+    audio.play();
+    console.log(audio);
+}
 </script>

@@ -2,6 +2,7 @@
   <WalletProvider>
     <TZKTWs :contracts="contracts">
       <top-nav></top-nav>
+      <RouterView class="pt-32 min-h-screen"/>
       <RouterView class=""/>
       <bot-nav></bot-nav>
     </TZKTWs>
@@ -24,3 +25,11 @@ const contracts = [
 
 // const isDark = useDark()
 </script>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+
+}
+</style>

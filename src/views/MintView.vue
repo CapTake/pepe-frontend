@@ -9,7 +9,7 @@
                 Sold Out!
             </div>
             <div v-else class="flex flex-col gap-5 items-center mx-auto text-center">
-                <h1 class="text-3xl sm:text-5xl font-pepe">Pepe crew onboarding</h1>
+                <h1 class="text-3xl sm:text-5xl font-pepe" style="background-image: url('/rainbowline.gif'); background-clip: text; color:transparent;">Pepe crew onboarding</h1>
                 <div class="text-2xl">
                     <progress class="progress progress-secondary w-56" :value="minted" :max="SUPPLY"></progress>
                     <div class="text-center">
@@ -101,12 +101,12 @@ const { pause: stopPricePolling } = useIntervalFn(() => {
 
   const { price: publicPrice, wlPrice, wlStart, wlEnd, start } = sale
 
-  if ((wlStart?.getTime() || Infinity) < now && (wlEnd?.getTime() || Infinity) > now) {
+  if ((wlStart?.getTime() || Number.POSITIVE_INFINITY) < now && (wlEnd?.getTime() || Number.POSITIVE_INFINITY) > now) {
     price.value = wlPrice
     return
   }
 
-  if ((start?.getTime() || Infinity) < now) {
+  if ((start?.getTime() || Number.POSITIVE_INFINITY) < now) {
     price.value = publicPrice
     stopPricePolling()
   }

@@ -16,7 +16,7 @@ export default {
         pepe: {
           "primary": "#00bde7",
                   
-          "secondary": "#0080ff",
+          "secondary": "#36a900",
                   
           "accent": "#00f57a",
                   

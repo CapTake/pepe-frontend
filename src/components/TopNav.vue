@@ -1,5 +1,5 @@
 <template>
-<nav class="bg-primary-90 fixed w-full p-4 top-0 z-50">
+<nav class="bg-opacity-40 bg-black fixed w-full p-4 top-0 z-50">
     <div class="flex gap-6 justify-between items-center">
         <RouterLink to="/#top" class="text-accent text-xl"><img src="../../logo.png" class="nav-logo"></RouterLink>
 
@@ -36,10 +36,14 @@
                 <input type="checkbox" v-model="menu" />
                 
                 <!-- hamburger icon -->
-                <svg class="swap-off fill-black" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
-                
+                 <span class="swap-off text-3xl">
+                     🍔
+                 </span>
+                 
                 <!-- close icon -->
-                <svg class="swap-on fill-black" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                <span class="swap-on text-3xl">
+                    💩
+                </span>
             </label>
     </div>
     <div v-if="menu" @click="menu = false" class="flex flex-col gap-4 text-4xl font-semibold tracking-wide justify-around items-center right-0 left-0 bottom-0 top-8 fixed bg-opacity-90 bg-primary-90 lg:hidden text-green">

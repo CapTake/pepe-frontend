@@ -3,7 +3,6 @@
     <TZKTWs :contracts="contracts">
       <top-nav></top-nav>
       <RouterView class="pt-32 min-h-screen"/>
-      <RouterView class=""/>
       <bot-nav></bot-nav>
     </TZKTWs>
   </WalletProvider>

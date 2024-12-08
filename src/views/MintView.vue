@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="h-screen" style="background-image:url('../../public/banner1.png');background-size:cover;max-height:750px;">
+        <div class="h-screen" style="background-image:url('/banner1.png');background-size:cover;max-height:750px;">
             <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
         </div>
 
@@ -46,7 +46,7 @@
         </h1>
 
 
-        <div class="h-screen mt-32" style="background-image:url('../../public/banner3.png');background-size:cover;width:100%;background-position:center bottom;">
+        <div class="h-screen mt-32" style="background-image:url('/banner3.png');background-size:cover;width:100%;background-position:center bottom;">
             <!--<h1 class="text-8xl font-pepe pt-64">Call of Pepe: <br>Modern Memefare</h1>-->
         </div>
     </div>
